@@ -1,5 +1,5 @@
-INSERT INTO Usuario(nombre, email, contrasenna, fotoPerfil) VALUES ('Oscar Mejia', 'oscarmejia@gmail.com', '123abc',NULL);
-INSERT INTO Usuario(nombre, email, contrasenna, fotoPerfil) VALUES ( 'Gabriela García', 'gabriela.garcia@gmail.com', '1234abcd', NULL);
+INSERT INTO Usuario(nombre, email, contrasenna, fotoPerfil) VALUES ('Oscar Mejia', 'oscarmejia@gmail.com', '123abc',NULL,1);
+INSERT INTO Usuario(nombre, email, contrasenna, fotoPerfil) VALUES ( 'Gabriela García', 'gabriela.garcia@gmail.com', '1234abcd', NULL,0);
 INSERT INTO UsuarioAdministrador(Usuarioid, cedula, puesto, verificado, fechaDeRenovacion, Gimnasioid) VALUES (1, 1234567890, 'Instructor de Yoga', 1, '2023-08-11', NULL);
 INSERT INTO Gimnasio(nombre, pisos, direccion, barrio, imagenGimnasio) VALUES ('FitnessWorld Gym', 3, 'Calle #123', 'Ciudad Deportiva',NULL);
 INSERT INTO Mapa(nivel, ancho, alto, version, Gimnasioid) VALUES (1,10,15,1,1);
