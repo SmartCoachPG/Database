@@ -22,7 +22,7 @@ CREATE TABLE Rutina_Musculo (Rutinaid int4 NOT NULL, Musculoid int4 NOT NULL, PR
 CREATE TABLE tipoEquipo (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE UbicacionxItem (coordenadaX int4 NOT NULL, coordenadaY int4 NOT NULL, Mapaid int4 NOT NULL, Itemid int4 NOT NULL, PRIMARY KEY (Mapaid, Itemid));
 CREATE TABLE UnidadMetrica (id SERIAL NOT NULL, metrica varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
-CREATE TABLE Usuario (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, email varchar(255) NOT NULL UNIQUE, contrasenna varchar(255) NOT NULL, fotoPerfil bytea,admi INT4 NOT NULL, , PRIMARY KEY (id));
+CREATE TABLE Usuario (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, email varchar(255) NOT NULL UNIQUE, contrasenna varchar(255) NOT NULL, fotoPerfil bytea,admi INT4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE UsuarioAdministrador (Usuarioid int4 NOT NULL, cedula float4 NOT NULL UNIQUE, puesto varchar(255) NOT NULL, verificado int4 NOT NULL, fechaDeRenovacion date NOT NULL, Gimnasioid int4, PRIMARY KEY (Usuarioid)); 
 CREATE TABLE UsuarioCliente (Usuarioid int4 NOT NULL, genero varchar(255) NOT NULL, fechaDeNacimiento date NOT NULL, Gimnasioid int4, NivelActividadFisicaid int4, ObjetivoRutinaid int4 NOT NULL, PRIMARY KEY (Usuarioid));
 CREATE TABLE UsuarioCliente_RestriccionMedica (UsuarioClienteUsuarioid int4 NOT NULL, RestriccionMedicaid int4 NOT NULL, PRIMARY KEY (UsuarioClienteUsuarioid, RestriccionMedicaid));
@@ -67,38 +67,3 @@ ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I895684 FOREIGN KEY (Gimnasi
 ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I423598 FOREIGN KEY (Itemid) REFERENCES Item (id);
 ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli729667 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli638662 FOREIGN KEY (RestriccionMedicaid) REFERENCES RestriccionMedica (id);
-
-
-
--- Drop Tables with Cascade
-DROP TABLE IF EXISTS VideoEjercicio CASCADE;
-DROP TABLE IF EXISTS ValorEvaluacionFisica CASCADE;
-DROP TABLE IF EXISTS Valor CASCADE;
-DROP TABLE IF EXISTS UsuarioCliente_RestriccionMedica CASCADE;
-DROP TABLE IF EXISTS UsuarioCliente CASCADE;
-DROP TABLE IF EXISTS UsuarioAdministrador CASCADE;
-DROP TABLE IF EXISTS Usuario CASCADE;
-DROP TABLE IF EXISTS UnidadMetrica CASCADE;
-DROP TABLE IF EXISTS UbicacionxItem CASCADE;
-DROP TABLE IF EXISTS tipoEquipo CASCADE;
-DROP TABLE IF EXISTS Rutina_Musculo CASCADE;
-DROP TABLE IF EXISTS Rutina_Ejercicio CASCADE;
-DROP TABLE IF EXISTS Rutina CASCADE;
-DROP TABLE IF EXISTS RestriccionMedica_Ejercicio CASCADE;
-DROP TABLE IF EXISTS RestriccionMedica CASCADE;
-DROP TABLE IF EXISTS ProgresoxEjercicio CASCADE;
-DROP TABLE IF EXISTS PerfilMedico CASCADE;
-DROP TABLE IF EXISTS ObjetivoRutina CASCADE;
-DROP TABLE IF EXISTS Objetivo CASCADE;
-DROP TABLE IF EXISTS NivelActividadFisica CASCADE;
-DROP TABLE IF EXISTS Musculo_Ejercicio CASCADE;
-DROP TABLE IF EXISTS Musculo CASCADE;
-DROP TABLE IF EXISTS Mapa CASCADE;
-DROP TABLE IF EXISTS Item CASCADE;
-DROP TABLE IF EXISTS Gimnasio_Item CASCADE;
-DROP TABLE IF EXISTS Gimnasio CASCADE;
-DROP TABLE IF EXISTS Equipo_Ejercicio CASCADE;
-DROP TABLE IF EXISTS Equipo CASCADE;
-DROP TABLE IF EXISTS Ejercicio_ProgresoxEjercicio CASCADE;
-DROP TABLE IF EXISTS Ejercicio CASCADE;
-DROP TABLE IF EXISTS ImagenEjercicio CASCADE;
