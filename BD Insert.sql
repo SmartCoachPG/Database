@@ -24,7 +24,7 @@ INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Itemid) VALUES (2, 
 INSERT INTO tipoEquipo(nombre) VALUES ('pesos');
 INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de peso');
 INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de cardio');
-INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid, Gimnasioid) VALUES (11,'Rouge Rubber Hex Dumbells',NULL,1,1);
+INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid) VALUES (11,'Rouge Rubber Hex Dumbells',NULL,1);
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Bajar peso');
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Aumentar musculo');
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Aumentar fuerza');

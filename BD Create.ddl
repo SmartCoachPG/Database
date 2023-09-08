@@ -1,6 +1,6 @@
 CREATE TABLE Ejercicio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, serieReferencia int4 NOT NULL, repeticionReferencia int4 NOT NULL, instruccionEjecucion varchar(500), instruccionRespiracion varchar(500), descansoEntreSeries time(7) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Ejercicio_ProgresoxEjercicio (Ejercicioid int4 NOT NULL, ProgresoxEjercicioid int4 NOT NULL, PRIMARY KEY (Ejercicioid, ProgresoxEjercicioid));
-CREATE TABLE Equipo (Itemid int4 NOT NULL, referencia varchar(255), UsuarioClienteUsuarioid int4, tipoEquipoid int4 NOT NULL, Gimnasioid int4, PRIMARY KEY (Itemid));
+CREATE TABLE Equipo (Itemid int4 NOT NULL, referencia varchar(255), UsuarioClienteUsuarioid int4, tipoEquipoid int4 NOT NULL, PRIMARY KEY (Itemid));
 CREATE TABLE Equipo_Ejercicio (EquipoItemid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (EquipoItemid, Ejercicioid));
 CREATE TABLE Gimnasio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, pisos int4 NOT NULL, direccion varchar(255) NOT NULL, barrio varchar(255) NOT NULL, imagenGimnasio bytea, PRIMARY KEY (id));
 CREATE TABLE Gimnasio_Item (Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, PRIMARY KEY (Gimnasioid, Itemid));
@@ -29,6 +29,7 @@ CREATE TABLE UsuarioCliente_RestriccionMedica (UsuarioClienteUsuarioid int4 NOT 
 CREATE TABLE Valor (valor float8, PerfilMedicoid int4, ValorEvaluacionFisicaid int4 NOT NULL);
 CREATE TABLE ValorEvaluacionFisica (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, descripcion varchar(255) NOT NULL, UnidadMetricaid int4, PRIMARY KEY (id));
 CREATE TABLE VideoEjercicio (id SERIAL NOT NULL, video bytea, Ejercicioid int4 NOT NULL, PRIMARY KEY (id));
+
 ALTER TABLE Rutina ADD CONSTRAINT FKRutina624241 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE ProgresoxEjercicio ADD CONSTRAINT FKProgresoxE847796 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE UsuarioCliente ADD CONSTRAINT FKUsuarioCli14039 FOREIGN KEY (NivelActividadFisicaid) REFERENCES NivelActividadFisica (id);
@@ -41,7 +42,6 @@ ALTER TABLE Valor ADD CONSTRAINT FKValor70700 FOREIGN KEY (PerfilMedicoid) REFER
 ALTER TABLE UsuarioAdministrador ADD CONSTRAINT FKUsuarioAdm388201 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
 ALTER TABLE UsuarioAdministrador ADD CONSTRAINT FKUsuarioAdm474264 FOREIGN KEY (Usuarioid) REFERENCES Usuario (id);
 ALTER TABLE UsuarioCliente ADD CONSTRAINT FKUsuarioCli595527 FOREIGN KEY (Usuarioid) REFERENCES Usuario (id);
-ALTER TABLE Equipo ADD CONSTRAINT FKEquipo669623 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
 ALTER TABLE Equipo ADD CONSTRAINT FKEquipo141710 FOREIGN KEY (Itemid) REFERENCES Item (id);
 ALTER TABLE Equipo_Ejercicio ADD CONSTRAINT FKEquipo_Eje583416 FOREIGN KEY (EquipoItemid) REFERENCES Equipo (Itemid);
 ALTER TABLE Equipo_Ejercicio ADD CONSTRAINT FKEquipo_Eje876701 FOREIGN KEY (Ejercicioid) REFERENCES Ejercicio (id);
