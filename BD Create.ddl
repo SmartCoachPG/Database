@@ -3,9 +3,9 @@ CREATE TABLE Ejercicio_ProgresoxEjercicio (Ejercicioid int4 NOT NULL, ProgresoxE
 CREATE TABLE Equipo (Itemid int4 NOT NULL, referencia varchar(255), UsuarioClienteUsuarioid int4, tipoEquipoid int4 NOT NULL, PRIMARY KEY (Itemid));
 CREATE TABLE Equipo_Ejercicio (EquipoItemid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (EquipoItemid, Ejercicioid));
 CREATE TABLE Gimnasio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, pisos int4 NOT NULL, direccion varchar(255) NOT NULL, barrio varchar(255) NOT NULL, imagenGimnasio bytea, PRIMARY KEY (id));
-CREATE TABLE Gimnasio_Item (Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, PRIMARY KEY (Gimnasioid, Itemid));
-CREATE TABLE ImagenEjercicio (id SERIAL NOT NULL, imagen bytea, Ejercicioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Item (id SERIAL NOT NULL, imagen bytea, nombre varchar(255), PRIMARY KEY (id));
+CREATE TABLE Gimnasio_Item (Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL,Cantidad int4 NOT NULL DEFAULT 0, PRIMARY KEY (Gimnasioid, Itemid));
+CREATE TABLE ImagenEjercicio (id SERIAL NOT NULL, imagen bytea, Ejercicioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Mapa (id SERIAL NOT NULL, nivel int4 NOT NULL, ancho int4 NOT NULL, alto int4 NOT NULL, version int4 NOT NULL, Gimnasioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Musculo (id SERIAL NOT NULL, nombreMusculo varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE Musculo_Ejercicio (Musculoid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (Musculoid, Ejercicioid));
@@ -20,10 +20,10 @@ CREATE TABLE Rutina (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, horaI tim
 CREATE TABLE Rutina_Ejercicio (Rutinaid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (Rutinaid, Ejercicioid));
 CREATE TABLE Rutina_Musculo (Rutinaid int4 NOT NULL, Musculoid int4 NOT NULL, PRIMARY KEY (Rutinaid, Musculoid));
 CREATE TABLE tipoEquipo (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
-CREATE TABLE UbicacionxItem (coordenadaX int4 NOT NULL, coordenadaY int4 NOT NULL, Mapaid int4 NOT NULL, Itemid int4 NOT NULL, PRIMARY KEY (Mapaid, Itemid));
+CREATE TABLE UbicacionxItem (coordenadaX int4 NOT NULL, coordenadaY int4 NOT NULL, Mapaid int4 NOT NULL, Itemid int4 NOT NULL,Gimnasioid int NOT NULL, PRIMARY KEY (Mapaid));
 CREATE TABLE UnidadMetrica (id SERIAL NOT NULL, metrica varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE Usuario (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, email varchar(255) NOT NULL UNIQUE, contrasenna varchar(255) NOT NULL, fotoPerfil bytea,admi INT4 NOT NULL, PRIMARY KEY (id));
-CREATE TABLE UsuarioAdministrador (Usuarioid int4 NOT NULL, cedula float4 NOT NULL UNIQUE, puesto varchar(255) NOT NULL, verificado int4 NOT NULL, fechaDeRenovacion date NOT NULL, Gimnasioid int4, PRIMARY KEY (Usuarioid)); 
+CREATE TABLE UsuarioAdministrador (Usuarioid int4 NOT NULL, cedula BIGINT NOT NULL UNIQUE, puesto varchar(255) NOT NULL, verificado int4 NOT NULL, fechaDeRenovacion date NOT NULL, Gimnasioid int4, PRIMARY KEY (Usuarioid)); 
 CREATE TABLE UsuarioCliente (Usuarioid int4 NOT NULL, genero varchar(255) NOT NULL, fechaDeNacimiento date NOT NULL, Gimnasioid int4, NivelActividadFisicaid int4, ObjetivoRutinaid int4 NOT NULL, PRIMARY KEY (Usuarioid));
 CREATE TABLE UsuarioCliente_RestriccionMedica (UsuarioClienteUsuarioid int4 NOT NULL, RestriccionMedicaid int4 NOT NULL, PRIMARY KEY (UsuarioClienteUsuarioid, RestriccionMedicaid));
 CREATE TABLE Valor (valor float8, PerfilMedicoid int4, ValorEvaluacionFisicaid int4 NOT NULL);
@@ -61,9 +61,10 @@ ALTER TABLE VideoEjercicio ADD CONSTRAINT FKVideoEjerc567052 FOREIGN KEY (Ejerci
 ALTER TABLE Equipo ADD CONSTRAINT FKEquipo951496 FOREIGN KEY (tipoEquipoid) REFERENCES tipoEquipo (id);
 ALTER TABLE Mapa ADD CONSTRAINT FKMapa331252 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
 ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx225855 FOREIGN KEY (Mapaid) REFERENCES Mapa (id);
-ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx613060 FOREIGN KEY (Itemid) REFERENCES Item (id);
+ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx613060 FOREIGN KEY (Itemid) REFERENCES Gimnasio_Item (Itemid);
+ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx613061 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio_Item (Gimnasioid);
 ALTER TABLE Valor ADD CONSTRAINT FKValor374246 FOREIGN KEY (ValorEvaluacionFisicaid) REFERENCES ValorEvaluacionFisica (id);
-ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I895684 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
-ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I423598 FOREIGN KEY (Itemid) REFERENCES Item (id);
 ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli729667 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli638662 FOREIGN KEY (RestriccionMedicaid) REFERENCES RestriccionMedica (id);
+ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I895684 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
+ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I423598 FOREIGN KEY (Itemid) REFERENCES Item (id);
