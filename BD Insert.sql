@@ -18,9 +18,9 @@ INSERT INTO Item(imagen, nombre) VALUES (NULL, 'escaleras');
 INSERT INTO Item(imagen, nombre) VALUES (NULL, 'mancuernas Hexagonales');
 INSERT INTO Item(imagen, nombre) VALUES (NULL, 'Set de Hipthrust');
 
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid) VALUES (1, 1);
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid) VALUES (1, 2);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Itemid) VALUES (2, 3, 1, 1);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid,cantidad) VALUES (1, 1,2);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid,cantidad) VALUES (1, 2,5);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Itemid,Gimnasioid) VALUES (2, 3, 1, 1,1);
 INSERT INTO tipoEquipo(nombre) VALUES ('pesos');
 INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de peso');
 INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de cardio');

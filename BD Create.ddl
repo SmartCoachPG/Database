@@ -10,7 +10,7 @@ CREATE TABLE Mapa (id SERIAL NOT NULL, nivel int4 NOT NULL, ancho int4 NOT NULL,
 CREATE TABLE Musculo (id SERIAL NOT NULL, nombreMusculo varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE Musculo_Ejercicio (Musculoid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (Musculoid, Ejercicioid));
 CREATE TABLE NivelActividadFisica (id SERIAL NOT NULL, titulo varchar(255) UNIQUE, descripcion varchar(500), PRIMARY KEY (id));
-CREATE TABLE Objetivo (id SERIAL NOT NULL, titulo varchar(255) NOT NULL, fechaInicio date NOT NULL, fechaFinal date NOT NULL, estado int4 NOT NULL, descripcionObjetivo varchar(255), UsuarioClienteUsuarioid int4 NOT NULL, PRIMARY KEY (id));
+CREATE TABLE Objetivo (id SERIAL NOT NULL, titulo varchar(255) NOT NULL, fechaInicio date NOT NULL DEFAULT CURRENT_DATE, fechaFinal date NOT NULL, estado int4 NOT NULL, descripcionObjetivo varchar(255), UsuarioClienteUsuarioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE ObjetivoRutina (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE PerfilMedico (id SERIAL NOT NULL, fecha date NOT NULL, UsuarioClienteUsuarioid int4, PRIMARY KEY (id));
 CREATE TABLE ProgresoxEjercicio (id SERIAL NOT NULL, peso int4 NOT NULL, fecha date NOT NULL, valoracion int4 NOT NULL, serie int4 NOT NULL, repeticiones int4 NOT NULL, comentarios varchar(255), UsuarioClienteUsuarioid int4, PRIMARY KEY (id));
@@ -61,8 +61,7 @@ ALTER TABLE VideoEjercicio ADD CONSTRAINT FKVideoEjerc567052 FOREIGN KEY (Ejerci
 ALTER TABLE Equipo ADD CONSTRAINT FKEquipo951496 FOREIGN KEY (tipoEquipoid) REFERENCES tipoEquipo (id);
 ALTER TABLE Mapa ADD CONSTRAINT FKMapa331252 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
 ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx225855 FOREIGN KEY (Mapaid) REFERENCES Mapa (id);
-ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx613060 FOREIGN KEY (Itemid) REFERENCES Gimnasio_Item (Itemid);
-ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx613061 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio_Item (Gimnasioid);
+ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx613060 FOREIGN KEY (Gimnasioid,Itemid) REFERENCES Gimnasio_Item (Gimnasioid,Itemid);
 ALTER TABLE Valor ADD CONSTRAINT FKValor374246 FOREIGN KEY (ValorEvaluacionFisicaid) REFERENCES ValorEvaluacionFisica (id);
 ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli729667 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli638662 FOREIGN KEY (RestriccionMedicaid) REFERENCES RestriccionMedica (id);
