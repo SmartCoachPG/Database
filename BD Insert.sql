@@ -24,13 +24,14 @@ INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Itemid,Gimnasioid) 
 INSERT INTO tipoEquipo(nombre) VALUES ('pesos');
 INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de peso');
 INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de cardio');
+INSERT INTO tipoEquipo(nombre) VALUES ('complementos');
 INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid) VALUES (11,'Rouge Rubber Hex Dumbells',NULL,1);
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Bajar peso');
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Aumentar musculo');
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Aumentar fuerza');
-INSERT INTO NivelActividadFisica(titulo, descripcion) VALUES ('moderado','Si eres una persona que realiza actividades físicas que aumentan tu ritmo cardíaco y respiración, como caminar rápido, andar en bicicleta, bailar, nadar, entre otras, durante al menos 20  minutos al dia, entonces se puede considerar que tienes un nivel de actividad física moderada.');
-INSERT INTO NivelActividadFisica(titulo, descripcion) VALUES ('leve','Si eres una persona que se mantiene sentada la mayor parte del día, no realiza actividad física regularmente  y evita las oportunidades de moverse, entonces probablemente se pueda considerar que tienes un estilo de vida sedentario.');
-INSERT INTO NivelActividadFisica(titulo, descripcion) VALUES ('energico','Este nivel de actividad física es para personas que realizan ejercicios de alta intensidad como correr, levantar pesas, practicar deportes de equipo intensos, entre otros. Si eres una persona que realiza este tipo de actividades a un ritmo vigoroso y con una frecuencia regular, entonces se puede considerar que tienes un nivel de actividad física energética.');
+INSERT INTO NivelActividadFisica(titulo) VALUES ('moderado');
+INSERT INTO NivelActividadFisica(titulo) VALUES ('leve');
+INSERT INTO NivelActividadFisica(titulo) VALUES ('energico');
 INSERT INTO UsuarioCliente(Usuarioid, genero, fechaDeNacimiento, Gimnasioid, NivelActividadFisicaid, ObjetivoRutinaid) VALUES (2,'F','2001-12-09',1,1,1);
 INSERT INTO Rutina(nombre, horaI, horaF, dia, duracion, cantEjercicios, UsuarioClienteUsuarioid) VALUES ('Rutina Hombros','07:00:00','09:00:00','L','02:00:00',1,2);
 INSERT INTO Musculo(nombreMusculo) VALUES ('Tríceps');
