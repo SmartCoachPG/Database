@@ -6,7 +6,7 @@ CREATE TABLE Gimnasio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, pisos i
 CREATE TABLE Gimnasio_Item (Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, Cantidad int4 NOT NULL, PRIMARY KEY (Gimnasioid, Itemid));
 CREATE TABLE Grupo_Muscular (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, ubicacion int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE ImagenEjercicio (id SERIAL NOT NULL, imagen TEXT, Ejercicioid int4 NOT NULL, PRIMARY KEY (id));
-CREATE TABLE Item (id SERIAL NOT NULL, imagen bytea, nombre varchar(255), PRIMARY KEY (id));
+CREATE TABLE Item (id SERIAL NOT NULL, imagen TEXT, nombre varchar(255), PRIMARY KEY (id));
 CREATE TABLE Mapa (id SERIAL NOT NULL, nivel int4 NOT NULL, ancho int4 NOT NULL, alto int4 NOT NULL, version int4 NOT NULL, Gimnasioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Musculo (id SERIAL NOT NULL, nombreMusculo varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE Musculo_Ejercicio (Musculoid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (Musculoid, Ejercicioid));
