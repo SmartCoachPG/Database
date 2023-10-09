@@ -68,7 +68,7 @@ INSERT INTO Grupo_Muscular(nombre, ubicacion) VALUES ('abdomen', 1); -- Tren sup
 INSERT INTO UsuarioCliente(Usuarioid, genero, fechaDeNacimiento, Gimnasioid, NivelActividadFisicaid, ObjetivoRutinaid, Grupo_Muscularid) VALUES (2, 'F', '2001-12-09', 1, 1, 1, 1);
 
 -- Insertando datos en la tabla Rutina
-INSERT INTO Rutina(horaI, horaF, dia, duracion, cantEjercicios, UsuarioClienteUsuarioid, Grupo_Muscularid) VALUES ('07:00:00', '09:00:00', 'L', '02:00:00', 1, 2, 1);
+INSERT INTO Rutina(horaI, horaF, dia, duracion, cantEjercicios, UsuarioClienteUsuarioid, Grupo_Muscularid) VALUES ('07:00:00', '09:00:00', 'Lunes', '02:00:00', 1, 2, 1);
 
 -- Insertando datos en la tabla Musculo
 INSERT INTO Musculo(nombreMusculo) VALUES ('Vastro intermedio'); -- cuadriceps
