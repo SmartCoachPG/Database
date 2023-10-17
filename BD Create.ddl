@@ -26,7 +26,7 @@ CREATE TABLE UnidadMetrica (id SERIAL NOT NULL, metrica varchar(255) NOT NULL UN
 CREATE TABLE Usuario (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, email varchar(255) NOT NULL UNIQUE, contraseña varchar(255) NOT NULL, fotoPerfil TEXT, admi int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE UsuarioAdministrador (Usuarioid int4 NOT NULL, cedula float4 NOT NULL UNIQUE, puesto varchar(255) NOT NULL, verificado int4 NOT NULL, fechaDeRenovacion date NOT NULL, Gimnasioid int4, PRIMARY KEY (Usuarioid));
 CREATE TABLE UsuarioCliente (Usuarioid int4 NOT NULL, genero varchar(255) NOT NULL, fechaDeNacimiento date NOT NULL, Gimnasioid int4, NivelActividadFisicaid int4, ObjetivoRutinaid int4 NOT NULL, Grupo_Muscularid int4 NOT NULL, PRIMARY KEY (Usuarioid));
-CREATE TABLE UsuarioCliente_RestriccionMedica (UsuarioClienteUsuarioid int4 NOT NULL, RestriccionMedicaid int4 NOT NULL, PRIMARY KEY (UsuarioClienteUsuarioid, RestriccionMedicaid));
+CREATE TABLE UsuarioCliente_RestriccionMedica (UsuarioClienteid int4 NOT NULL, RestriccionMedicaid int4 NOT NULL, PRIMARY KEY (UsuarioClienteid, RestriccionMedicaid));
 CREATE TABLE Valor (id SERIAL NOT NULL, valor float8, PerfilMedicoid int4, ValorEvaluacionFisicaid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE ValorEvaluacionFisica (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, descripcion varchar(255) NOT NULL, UnidadMetricaid int4, PRIMARY KEY (id));
 CREATE TABLE VideoEjercicio (id SERIAL NOT NULL, video bytea, Ejercicioid int4 NOT NULL, PRIMARY KEY (id));

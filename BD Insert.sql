@@ -209,7 +209,7 @@ INSERT INTO Objetivo(titulo, fechaInicio, fechaFinal, estado, descripcionObjetiv
 INSERT INTO Objetivo(titulo, fechaInicio, fechaFinal, estado, descripcionObjetivo, UsuarioClienteUsuarioid) VALUES ('Desafío de Fuerza y Resistencia','2023-09-15','2023-12-15',1,'Mi Peso maximo en cualquier ejercicio sera de 100lbs',2);
 
 -- Insertando datos en la tabla UsuarioCliente_RestriccionMedica
-INSERT INTO UsuarioCliente_RestriccionMedica(UsuarioClienteUsuarioid, RestriccionMedicaid) VALUES (2, 1);
+INSERT INTO UsuarioCliente_RestriccionMedica(UsuarioClienteid, RestriccionMedicaid) VALUES (2, 1);
 
 -- Insertando datos en la tabla UnidadMetrica
 INSERT INTO UnidadMetrica(metrica) VALUES ('kg');
