@@ -6,7 +6,7 @@ INSERT INTO Usuario(nombre, email, contraseña, fotoPerfil, admi) VALUES ('Gabri
 INSERT INTO Gimnasio(nombre, pisos, direccion, barrio, imagenGimnasio) VALUES ('FitnessWorld Gym', 3, 'Calle #123', 'Ciudad Deportiva', NULL);
 
 -- Insertando datos en la tabla UsuarioAdministrador
-INSERT INTO UsuarioAdministrador(Usuarioid, cedula, puesto, verificado, fechaDeRenovacion, Gimnasioid) VALUES (1, 1234567890, 'Instructor de Yoga', 1, '2023-08-11', NULL);
+INSERT INTO UsuarioAdministrador(Usuarioid, cedula, puesto, verificado, fechaDeRenovacion, Gimnasioid) VALUES (1, 1234567890, 'Instructor de Yoga', 1, '2023-08-11', 1);
 
 -- Insertando datos en la tabla Mapa
 INSERT INTO Mapa(nivel, ancho, alto, version, Gimnasioid) VALUES (1, 10, 15, 1, 1);
