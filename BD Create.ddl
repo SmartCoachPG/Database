@@ -21,7 +21,7 @@ CREATE TABLE RestriccionMedica_Ejercicio (RestriccionMedicaid int4 NOT NULL, Eje
 CREATE TABLE Rutina (id SERIAL NOT NULL, horaI time(7), horaF time(7), dia varchar(255) NOT NULL, duracion time(7) NOT NULL, cantEjercicios int4 NOT NULL, UsuarioClienteUsuarioid int4, Grupo_Muscularid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Rutina_Ejercicio (Rutinaid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (Rutinaid, Ejercicioid));
 CREATE TABLE tipoEquipo (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
-CREATE TABLE UbicacionxItem (coordenadaX int4 NOT NULL, coordenadaY int4 NOT NULL, Mapaid int4 NOT NULL, Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, PRIMARY KEY (Mapaid));
+CREATE TABLE UbicacionxItem (id SERIAL NOT NULL,coordenadaX int4 NOT NULL, coordenadaY int4 NOT NULL, Mapaid int4 NOT NULL, Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, PRIMARY KEY(id));
 CREATE TABLE UnidadMetrica (id SERIAL NOT NULL, metrica varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE Usuario (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, email varchar(255) NOT NULL UNIQUE, contraseña varchar(255) NOT NULL, fotoPerfil TEXT, admi int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE UsuarioAdministrador (Usuarioid int4 NOT NULL, cedula float4 NOT NULL UNIQUE, puesto varchar(255) NOT NULL, verificado int4 NOT NULL, fechaDeRenovacion date NOT NULL, Gimnasioid int4, PRIMARY KEY (Usuarioid));
