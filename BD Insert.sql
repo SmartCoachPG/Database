@@ -96,11 +96,12 @@ INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de cardio');
 INSERT INTO tipoEquipo(nombre) VALUES ('complementos');
 
 -- Insertando datos en la tabla Equipo
-INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid) VALUES (11, 'MarcaX Barra Olímpica Pro', NULL, 1); 
-INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid) VALUES (12, 'MarcaY Banco de Pesas Elite', NULL, 2); 
-INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid) VALUES (13, 'MarcaZ Barra con Pesas Advanced', NULL, 1);
-INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid) VALUES (14, 'MarcaW Esterilla Comfort', NULL, 4); 
-INSERT INTO Equipo(Itemid, referencia, UsuarioClienteUsuarioid, tipoEquipoid) VALUES (15, 'Ejercicio con el peso corporal', NULL, 4); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (11, 'MarcaX Barra Olímpica Pro', NULL, 1,"La Barra Olímpica Pro de MarcaX es ideal para levantamientos pesados y ejercicios de halterofilia, garantizando durabilidad y resistencia."); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (12, 'MarcaY Banco de Pesas Elite', NULL, 2,"El Banco de Pesas Elite de MarcaY ofrece una construcción robusta y versatilidad para una variedad de ejercicios de entrenamiento de fuerza, permitiendo ajustes de posición para mayor funcionalidad."); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (13, 'MarcaZ Barra con Pesas Advanced', NULL, 1,"La Barra con Pesas Advanced de MarcaZ es una herramienta versátil diseñada para desarrollar la fuerza y la tonificación muscular, adecuada para una variedad de ejercicios y rutinas.");
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (14, 'MarcaW Esterilla Comfort', NULL, 4,"La Esterilla Comfort de MarcaW proporciona una superficie acolchada y antideslizante, ideal para yoga, pilates y otros ejercicios de suelo, asegurando comodidad y estabilidad."); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (15, 'Ejercicio con el peso corporal', NULL, 4,"Este equipo está diseñado para ejercicios que utilizan el peso corporal como resistencia, promoviendo el desarrollo de fuerza, flexibilidad y equilibrio sin necesidad de equipamiento adicional."); 
+
 -- Insertando datos en la tabla ObjetivoRutina
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Aumentar resistencia');
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Aumentar musculo');

@@ -1,6 +1,6 @@
 CREATE TABLE Ejercicio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, instruccionEjecucion varchar(500), instruccionRespiracion varchar(500), PRIMARY KEY (id));
 CREATE TABLE Ejercicio_ProgresoxEjercicio (Ejercicioid int4 NOT NULL, ProgresoxEjercicioid int4 NOT NULL, PRIMARY KEY (Ejercicioid, ProgresoxEjercicioid));
-CREATE TABLE Equipo (Itemid int4 NOT NULL, referencia varchar(255), UsuarioClienteUsuarioid int4, tipoEquipoid int4 NOT NULL, PRIMARY KEY (Itemid));
+CREATE TABLE Equipo (Itemid int4 NOT NULL, referencia varchar(255), descripcion varchar(225), Usuarioid int4, tipoEquipoid int4 NOT NULL, PRIMARY KEY (Itemid));
 CREATE TABLE Equipo_Ejercicio (EquipoItemid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (EquipoItemid, Ejercicioid));
 CREATE TABLE Gimnasio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, pisos int4 NOT NULL, direccion varchar(255) NOT NULL, barrio varchar(255) NOT NULL, imagenGimnasio TEXT, PRIMARY KEY (id));
 CREATE TABLE Gimnasio_Item (Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, Cantidad int4 NOT NULL, PRIMARY KEY (Gimnasioid, Itemid));
