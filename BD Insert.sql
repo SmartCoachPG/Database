@@ -36,20 +36,19 @@ INSERT INTO Item(nombre,imagen) VALUES ('BodyWeight',null);
 
 
 -- Insertando datos en la tabla Gimnasio_Item
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 1, 0);
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 2, 0);
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 8, 0);
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 6, 0);
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 7, 0);
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 4, 0);
-INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 10, 0);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 1, 30);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 2, 1);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 8, 1);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 6, 1);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 7, 2);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 4, 2);
+INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 10, 1);
 INSERT INTO Gimnasio_Item(Gimnasioid, Itemid, Cantidad) VALUES (1, 14, 10);
 
 
 -- Insertando datos en la tabla UbicacionxItem
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 20, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (2, 20, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 20, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 19, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (2, 19, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 19, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 18, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 17, 1, 1, 1);
@@ -57,16 +56,16 @@ INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid)
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 15, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 14, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (2, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (4, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (6, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (8, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 13, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (10, 13, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (2, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (4, 12, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (6, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (8, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 12, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (10, 12, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 11, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 10, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 9, 1, 1, 1);
@@ -77,24 +76,25 @@ INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid)
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 4, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 3, 1, 1, 1);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 2, 1, 1, 1);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 21, 1, 1, 2);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 21, 1, 1, 8);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 17, 1, 1, 6);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 1, 1, 1, 7);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 1, 1, 1, 7);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (6, 1, 1, 1, 4);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (4, 1, 1, 1, 4);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 14, 1, 1, 10);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (5, 1, 1, 1, 1);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 20, 1, 1, 2);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (3, 20, 1, 1, 8);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 16, 1, 1, 6);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 0, 1, 1, 7);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 0, 1, 1, 7);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (6, 0, 1, 1, 4);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (4, 0, 1, 1, 4);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (1, 13, 1, 1, 10);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 3, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 4, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 5, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 6, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 7, 1, 1, 14);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (7, 8, 1, 1, 14);
+INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 3, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 4, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 5, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 6, 1, 1, 14);
 INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 7, 1, 1, 14);
-INSERT INTO UbicacionxItem(coordenadaX, coordenadaY, Mapaid, Gimnasioid, Itemid) VALUES (9, 8, 1, 1, 14);
 
 -- Insertando datos en la tabla tipoEquipo
 INSERT INTO tipoEquipo(nombre) VALUES ('pesos');
