@@ -103,11 +103,11 @@ INSERT INTO tipoEquipo(nombre) VALUES ('maquinas de cardio');
 INSERT INTO tipoEquipo(nombre) VALUES ('complementos');
 
 -- Insertando datos en la tabla Equipo
-INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (11, 'MarcaX Barra Olímpica Pro', NULL, 1,"La Barra Olímpica Pro de MarcaX es ideal para levantamientos pesados y ejercicios de halterofilia, garantizando durabilidad y resistencia."); 
-INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (12, 'MarcaY Banco de Pesas Elite', NULL, 2,"El Banco de Pesas Elite de MarcaY ofrece una construcción robusta y versatilidad para una variedad de ejercicios de entrenamiento de fuerza, permitiendo ajustes de posición para mayor funcionalidad."); 
-INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (13, 'MarcaZ Barra con Pesas Advanced', NULL, 1,"La Barra con Pesas Advanced de MarcaZ es una herramienta versátil diseñada para desarrollar la fuerza y la tonificación muscular, adecuada para una variedad de ejercicios y rutinas.");
-INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (14, 'MarcaW Esterilla Comfort', NULL, 4,"La Esterilla Comfort de MarcaW proporciona una superficie acolchada y antideslizante, ideal para yoga, pilates y otros ejercicios de suelo, asegurando comodidad y estabilidad."); 
-INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (15, 'Ejercicio con el peso corporal', NULL, 4,"Este equipo está diseñado para ejercicios que utilizan el peso corporal como resistencia, promoviendo el desarrollo de fuerza, flexibilidad y equilibrio sin necesidad de equipamiento adicional."); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (11, 'MarcaX Barra Olímpica Pro', NULL, 1,'La Barra Olímpica Pro de MarcaX es ideal para levantamientos pesados y ejercicios de halterofilia, garantizando durabilidad y resistencia.'); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (12, 'MarcaY Banco de Pesas Elite', NULL, 2,'El Banco de Pesas Elite de MarcaY ofrece una construcción robusta y versatilidad para una variedad de ejercicios de entrenamiento de fuerza, permitiendo ajustes de posición para mayor funcionalidad.'); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (13, 'MarcaZ Barra con Pesas Advanced', NULL, 1,'La Barra con Pesas Advanced de MarcaZ es una herramienta versátil diseñada para desarrollar la fuerza y la tonificación muscular, adecuada para una variedad de ejercicios y rutinas.');
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (14, 'MarcaW Esterilla Comfort', NULL, 4,'La Esterilla Comfort de MarcaW proporciona una superficie acolchada y antideslizante, ideal para yoga, pilates y otros ejercicios de suelo, asegurando comodidad y estabilidad.'); 
+INSERT INTO Equipo(Itemid, referencia, Usuarioid, tipoEquipoid,descripcion) VALUES (15, 'Ejercicio con el peso corporal', NULL, 4,'Este equipo está diseñado para ejercicios que utilizan el peso corporal como resistencia, promoviendo el desarrollo de fuerza, flexibilidad y equilibrio sin necesidad de equipamiento adicional.'); 
 
 -- Insertando datos en la tabla ObjetivoRutina
 INSERT INTO ObjetivoRutina(nombre) VALUES ('Aumentar resistencia');
@@ -176,7 +176,6 @@ INSERT INTO Ejercicio(nombre, instruccionEjecucion, instruccionRespiracion) VALU
 INSERT INTO Ejercicio(nombre, instruccionEjecucion, instruccionRespiracion) VALUES ('Press de banca', 'Acuéstate en una banca con los pies firmemente en el suelo. Agarra la barra con un agarre un poco más ancho que el ancho de los hombros. Levanta la barra del soporte y mantén los brazos extendidos. Baja la barra hacia el pecho de manera controlada. Empuja la barra hacia arriba hasta que los brazos estén completamente extendidos.', 'Inhala al bajar la barra. Exhala al empujar la barra hacia arriba.');
 INSERT INTO Ejercicio(nombre, instruccionEjecucion, instruccionRespiracion) VALUES ('Puentes de glúteos', 'Siéntate en el suelo con una banca detrás de ti y una barra cargada sobre tus caderas. Apoya la parte superior de la espalda en la banca y asegúrate de que tus hombros estén en el borde de la misma. Empuja a través de tus talones y levanta tus caderas hacia el techo, apretando los glúteos en la parte superior. Baja las caderas hacia el suelo de manera controlada.', 'Inhala al bajar las caderas. Exhala al levantar las caderas.');
 INSERT INTO Ejercicio(nombre, instruccionEjecucion, instruccionRespiracion) VALUES ('Crunches abdominales', 'Acuéstate en el suelo con las rodillas dobladas y los pies planos en el suelo. Coloca tus manos detrás de tu cabeza o cruzadas sobre el pecho. Levanta la parte superior del cuerpo del suelo, contrayendo los músculos abdominales. Baja de nuevo de manera controlada.', 'Exhala al levantar la parte superior del cuerpo. Inhala al bajar.');
-
 INSERT INTO Ejercicio(nombre, instruccionEjecucion, instruccionRespiracion) VALUES ('Sentadillas - no equipo', 'Pies a la anchura de los hombros, baja el cuerpo manteniendo la espalda recta. Opciones de equipo: Puedes sostener una maleta, una mochila con libros o mancuernas.', 'Inhala al bajar, exhala al subir.');
 INSERT INTO Ejercicio(nombre, instruccionEjecucion, instruccionRespiracion) VALUES ('Lunges o zancadas - no equipo', 'Da un paso adelante, baja el cuerpo manteniendo la postura. Opciones de equipo: Mancuernas en las manos o una mochila con peso.', 'Inhala al bajar, exhala al subir.');
 INSERT INTO Ejercicio(nombre, instruccionEjecucion, instruccionRespiracion) VALUES ('Wall Sit - no equipo', 'Espalda contra la pared, piernas a 90 grados. Opciones de equipo: Puedes sostener un peso contra el pecho.', 'Respira de manera constante y controlada.');
@@ -216,7 +215,6 @@ INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (11, 1); -- Barra
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (12, 2); -- Banco de Pesas Elite para Press de banca
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (13, 3); -- Barra con Pesas Advanced para Puentes de glúteos
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (14, 4); -- Esterilla Comfort para Crunches abdominales
-
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (15, 5); 
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (15, 6); 
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (15, 7); 
@@ -229,7 +227,6 @@ INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (15, 13);
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (15, 14); 
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (15, 15); 
 INSERT INTO Equipo_Ejercicio(EquipoItemid, Ejercicioid) VALUES (15, 16); 
-
 
 -- Insertando datos en la tabla RestriccionMedica
 INSERT INTO RestriccionMedica(nombreLimitacion) VALUES ('Lesiones de rodilla');
@@ -244,13 +241,10 @@ INSERT INTO RestriccionMedica_Ejercicio(RestriccionMedicaid, Ejercicioid) VALUES
 INSERT INTO RestriccionMedica_Ejercicio(RestriccionMedicaid, Ejercicioid) VALUES (4, 4), (4, 14), (4, 15), (4, 16); -- Hernias abdominales
 
 -- Insertando datos en la tabla Musculo_Ejercicio
-
 INSERT INTO Musculo_Ejercicio(Musculoid, Ejercicioid) VALUES (1, 1),(2, 1), (3, 1), (4, 1); -- Sentadillas peso
 INSERT INTO Musculo_Ejercicio(Musculoid, Ejercicioid) VALUES (5, 2),(6, 2),(7, 2); -- Press de banca
 INSERT INTO Musculo_Ejercicio(Musculoid, Ejercicioid) VALUES (8, 3), (9, 3),(10, 3); -- Puentes de gluteos 
 INSERT INTO Musculo_Ejercicio(Musculoid, Ejercicioid) VALUES (11, 4),(12, 4),(13, 4),(14, 4); -- Crunches abdominales
-
-
 INSERT INTO Musculo_Ejercicio(Musculoid, Ejercicioid) VALUES (1, 5), (2, 5), (3, 5), (4, 5), (8, 5); -- Sentadillas sin peso
 INSERT INTO Musculo_Ejercicio(Musculoid, Ejercicioid) VALUES (1, 6), (2, 6), (3, 6), (4, 6), (8, 6); -- Lunges o zancadas sin peso
 INSERT INTO Musculo_Ejercicio(Musculoid, Ejercicioid) VALUES (1, 7), (2, 7), (3, 7), (4, 7); -- Wall sit sin peso
