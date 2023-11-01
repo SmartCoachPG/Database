@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS Objetivo CASCADE;
 DROP TABLE IF EXISTS Ejercicio_ProgresoxEjercicio CASCADE;
 DROP TABLE IF EXISTS musculo_grupomuscular CASCADE;
 DROP TABLE IF EXISTS Rutina_Ejercicio CASCADE;
+DROP TABLE IF EXISTS rutina_musculo;
 DROP TABLE IF EXISTS RestriccionMedica_Ejercicio CASCADE;
 DROP TABLE IF EXISTS Musculo_Ejercicio CASCADE;
 DROP TABLE IF EXISTS Equipo_Ejercicio CASCADE;

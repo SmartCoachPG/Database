@@ -36,7 +36,7 @@ ALTER TABLE UsuarioCliente ADD CONSTRAINT FKUsuarioCli14039 FOREIGN KEY (NivelAc
 ALTER TABLE ValorEvaluacionFisica ADD CONSTRAINT FKValorEvalu390301 FOREIGN KEY (UnidadMetricaid) REFERENCES UnidadMetrica (id);
 ALTER TABLE UsuarioCliente ADD CONSTRAINT FKUsuarioCli371623 FOREIGN KEY (ObjetivoRutinaid) REFERENCES ObjetivoRutina (id);
 ALTER TABLE UsuarioCliente ADD CONSTRAINT FKUsuarioCli462126 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
-ALTER TABLE Equipo ADD CONSTRAINT FKEquipo467797 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
+ALTER TABLE Equipo ADD CONSTRAINT FKEquipo467797 FOREIGN KEY (Usuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE PerfilMedico ADD CONSTRAINT FKPerfilMedi657776 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE Valor ADD CONSTRAINT FKValor70700 FOREIGN KEY (PerfilMedicoid) REFERENCES PerfilMedico (id);
 ALTER TABLE UsuarioAdministrador ADD CONSTRAINT FKUsuarioAdm388201 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
@@ -63,7 +63,7 @@ ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx225855 FOREIGN KEY (Mapaid
 ALTER TABLE Valor ADD CONSTRAINT FKValor374246 FOREIGN KEY (ValorEvaluacionFisicaid) REFERENCES ValorEvaluacionFisica (id);
 ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I895684 FOREIGN KEY (Gimnasioid) REFERENCES Gimnasio (id);
 ALTER TABLE Gimnasio_Item ADD CONSTRAINT FKGimnasio_I423598 FOREIGN KEY (Itemid) REFERENCES Item (id);
-ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli729667 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
+ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli729667 FOREIGN KEY (UsuarioClienteid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE UsuarioCliente_RestriccionMedica ADD CONSTRAINT FKUsuarioCli638662 FOREIGN KEY (RestriccionMedicaid) REFERENCES RestriccionMedica (id);
 ALTER TABLE UbicacionxItem ADD CONSTRAINT FKUbicacionx387642 FOREIGN KEY (Gimnasioid, Itemid) REFERENCES Gimnasio_Item (Gimnasioid, Itemid);
 ALTER TABLE Rutina ADD CONSTRAINT FKRutina305431 FOREIGN KEY (Grupo_Muscularid) REFERENCES Grupo_Muscular (id);
