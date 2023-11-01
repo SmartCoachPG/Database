@@ -1,6 +1,6 @@
 CREATE TABLE Ejercicio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, instruccionEjecucion varchar(500), instruccionRespiracion varchar(500), PRIMARY KEY (id));
 CREATE TABLE Ejercicio_ProgresoxEjercicio (Ejercicioid int4 NOT NULL, ProgresoxEjercicioid int4 NOT NULL, PRIMARY KEY (Ejercicioid, ProgresoxEjercicioid));
-CREATE TABLE Equipo (Itemid int4 NOT NULL, referencia varchar(255), descripcion varchar(225), Usuarioid int4, tipoEquipoid int4 NOT NULL, PRIMARY KEY (Itemid));
+CREATE TABLE Equipo (Itemid int4 NOT NULL, referencia varchar(255), descripcion varchar(255), Usuarioid int4, tipoEquipoid int4 NOT NULL, PRIMARY KEY (Itemid));
 CREATE TABLE Equipo_Ejercicio (EquipoItemid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (EquipoItemid, Ejercicioid));
 CREATE TABLE Gimnasio (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, pisos int4 NOT NULL, direccion varchar(255) NOT NULL, barrio varchar(255) NOT NULL, imagenGimnasio TEXT, PRIMARY KEY (id));
 CREATE TABLE Gimnasio_Item (Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, Cantidad int4 NOT NULL, PRIMARY KEY (Gimnasioid, Itemid));
@@ -15,7 +15,7 @@ CREATE TABLE NivelActividadFisica (id SERIAL NOT NULL, titulo varchar(255) UNIQU
 CREATE TABLE Objetivo (id SERIAL NOT NULL, titulo varchar(255) NOT NULL, fechaInicio date NOT NULL, fechaFinal date NOT NULL, estado int4 NOT NULL, descripcionObjetivo varchar(255), UsuarioClienteUsuarioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE ObjetivoRutina (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE PerfilMedico (id SERIAL NOT NULL, fecha date NOT NULL, UsuarioClienteUsuarioid int4, PRIMARY KEY (id));
-CREATE TABLE ProgresoxEjercicio (id SERIAL NOT NULL, peso int4 NOT NULL, fecha date NOT NULL, valoracion int4 NOT NULL, serie int4 NOT NULL, repeticiones int4 NOT NULL, comentarios varchar(255), descansoEntreSeries time NOT NULL, UsuarioClienteUsuarioid int4 NOT NULL, PRIMARY KEY (id));
+CREATE TABLE ProgresoxEjercicio (id SERIAL NOT NULL, peso int4 NOT NULL, fecha date NOT NULL, valoracion int4, serie int4 NOT NULL, repeticiones int4 NOT NULL, comentarios varchar(255), descansoEntreSeries time NOT NULL, UsuarioClienteUsuarioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE RestriccionMedica (id SERIAL NOT NULL, nombreLimitacion varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE RestriccionMedica_Ejercicio (RestriccionMedicaid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (RestriccionMedicaid, Ejercicioid));
 CREATE TABLE Rutina (id SERIAL NOT NULL, horaI time(7), horaF time(7), dia varchar(255) NOT NULL, duracion time(7) NOT NULL, cantEjercicios int4 NOT NULL, UsuarioClienteUsuarioid int4, Grupo_Muscularid int4 NOT NULL, PRIMARY KEY (id));
