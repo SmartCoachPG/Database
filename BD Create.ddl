@@ -11,7 +11,7 @@ CREATE TABLE Mapa (id SERIAL NOT NULL, nivel int4 NOT NULL, ancho int4 NOT NULL,
 CREATE TABLE Musculo (id SERIAL NOT NULL, nombreMusculo varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE Musculo_Ejercicio (Musculoid int4 NOT NULL, Ejercicioid int4 NOT NULL, PRIMARY KEY (Musculoid, Ejercicioid));
 CREATE TABLE Musculo_grupomuscular (Musculoid int4 NOT NULL, Grupo_Muscularid int4 NOT NULL, PRIMARY KEY (Musculoid, Grupo_Muscularid));
-CREATE TABLE NivelActividadFisica (id SERIAL NOT NULL, titulo varchar(255) UNIQUE, PRIMARY KEY (id));
+CREATE TABLE NivelActividadFisica (id SERIAL NOT NULL, titulo varchar(255) UNIQUE NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Objetivo (id SERIAL NOT NULL, titulo varchar(255) NOT NULL, fechaInicio date NOT NULL, fechaFinal date NOT NULL, estado int4 NOT NULL, descripcionObjetivo varchar(255), UsuarioClienteUsuarioid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE ObjetivoRutina (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE PerfilMedico (id SERIAL NOT NULL, fecha date NOT NULL, UsuarioClienteUsuarioid int4, PRIMARY KEY (id));
@@ -23,13 +23,13 @@ CREATE TABLE Rutina_Ejercicio (Rutinaid int4 NOT NULL, Ejercicioid int4 NOT NULL
 CREATE TABLE tipoEquipo (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
 CREATE TABLE UbicacionxItem (id SERIAL NOT NULL,coordenadaX int4 NOT NULL, coordenadaY int4 NOT NULL, Mapaid int4 NOT NULL, Gimnasioid int4 NOT NULL, Itemid int4 NOT NULL, PRIMARY KEY(id));
 CREATE TABLE UnidadMetrica (id SERIAL NOT NULL, metrica varchar(255) NOT NULL UNIQUE, PRIMARY KEY (id));
-CREATE TABLE Usuario (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, email varchar(255) NOT NULL UNIQUE, contraseña varchar(255) NOT NULL, fotoPerfil TEXT, admi int4 NOT NULL, PRIMARY KEY (id));
+CREATE TABLE Usuario (id SERIAL NOT NULL, nombre varchar(255) NOT NULL, email varchar(255) NOT NULL UNIQUE, contraseña varchar(255) NOT NULL, fotoPerfil TEXT, admi int4 NOT NULL,token varchar(255), PRIMARY KEY (id));
 CREATE TABLE UsuarioAdministrador (Usuarioid int4 NOT NULL, cedula float4 NOT NULL UNIQUE, puesto varchar(255) NOT NULL, verificado int4 NOT NULL, fechaDeRenovacion date NOT NULL, Gimnasioid int4, PRIMARY KEY (Usuarioid));
 CREATE TABLE UsuarioCliente (Usuarioid int4 NOT NULL, genero varchar(255) NOT NULL, fechaDeNacimiento date NOT NULL, Gimnasioid int4, NivelActividadFisicaid int4, ObjetivoRutinaid int4 NOT NULL, Grupo_Muscularid int4 NOT NULL, PRIMARY KEY (Usuarioid));
 CREATE TABLE UsuarioCliente_RestriccionMedica (UsuarioClienteid int4 NOT NULL, RestriccionMedicaid int4 NOT NULL, PRIMARY KEY (UsuarioClienteid, RestriccionMedicaid));
 CREATE TABLE Valor (id SERIAL NOT NULL, valor float8, PerfilMedicoid int4, ValorEvaluacionFisicaid int4 NOT NULL, PRIMARY KEY (id));
 CREATE TABLE ValorEvaluacionFisica (id SERIAL NOT NULL, nombre varchar(255) NOT NULL UNIQUE, descripcion varchar(255) NOT NULL, UnidadMetricaid int4, PRIMARY KEY (id));
-CREATE TABLE VideoEjercicio (id SERIAL NOT NULL, video bytea, Ejercicioid int4 NOT NULL, PRIMARY KEY (id));
+CREATE TABLE VideoEjercicio (id SERIAL NOT NULL, video bytea, Ejercicioid int4, PRIMARY KEY (id));
 ALTER TABLE Rutina ADD CONSTRAINT FKRutina624241 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE ProgresoxEjercicio ADD CONSTRAINT FKProgresoxE847796 FOREIGN KEY (UsuarioClienteUsuarioid) REFERENCES UsuarioCliente (Usuarioid);
 ALTER TABLE UsuarioCliente ADD CONSTRAINT FKUsuarioCli14039 FOREIGN KEY (NivelActividadFisicaid) REFERENCES NivelActividadFisica (id);
